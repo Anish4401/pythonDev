@@ -52,7 +52,7 @@ read_the_csv.info()
 data=read_the_csv['Code']  # it will take the value of the Value column
 labels=read_the_csv[['Code','Symbol',"Name"]]
 colors=['red','blue','green','yellow']
-explode=[0.1,0,0,0]
+explode=[0.1,0,0,0,0,0,0,0,0,0]
 plots.pie(data,labels=labels,colors=colors,autopct='%1.1f%%',shadow=True,explode=explode)
 print(plots.show())
 

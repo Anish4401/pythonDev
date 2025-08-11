@@ -36,32 +36,32 @@ import matplotlib.pyplot as plt
 
 #Now we will custamise with some dataset with matplotlib and seaborn 
 import pandas as pd
-# curr=pd.read_csv("currency.csv")
-# print(curr.head(10))
+curr=pd.read_csv("currency.csv")
+print(curr.head(10))
 # plt.rcParams['font.family'] = 'Noto Sans Bengali'  # Set the font family to Noto Sans Bengali
-# sns.barplot(data=curr,x="Code",y="Symbol",estimator=len, palette="viridis")
-# plt.xticks(rotation=45)  # Rotate x-axis labels for better visibility
-# plt.title("Currency Val")
-# plt.xlabel("Code")
-# plt.ylabel("Symbol")
-# plt.show()
-from sklearn.linear_model import LinearRegression
-import pandas as pd
+sns.histplot(data=curr,x="Code",y="Symbol",palette="viridis")
+plt.xticks(rotation=45)  # Rotate x-axis labels for better visibility
+plt.title("Currency Val")
+plt.xlabel("Code") 
+plt.ylabel("Symbol")
+plt.show()
+# from sklearn.linear_model import LinearRegression
+# import pandas as pd
 
-# Sample data
-# data = {'hours_studied': [1, 2, 3, 4, 5],
-#         'marks_obtained': [20, 40, 60, 80, 100]}
-landRate={'year':[2010,2013,2017,2020],
-          'rate':[5,7,9,11]}
+# # Sample data
+# # data = {'hours_studied': [1, 2, 3, 4, 5],
+# #         'marks_obtained': [20, 40, 60, 80, 100]}
+# landRate={'year':[2010,2013,2017,2020],
+#           'rate':[5,7,9,11]}
 
-df = pd.DataFrame(landRate)
+# df = pd.DataFrame(landRate)
 
-X = df[['year']]  # Features
-y = df['rate']   # Target
+# X = df[['year']]  # Features
+# y = df['rate']   # Target
 
-model = LinearRegression()
-model.fit(X, y)
+# model = LinearRegression()
+# model.fit(X, y)
 
-# Predict marks for 6 hours of study
-print(model.predict([[2025]])) # i think linear regression is not working properly here for the year 2025 so we will use another method to predict the rate for 2025
+# # Predict marks for 6 hours of study
+# print(model.predict([[2025]])) # i think linear regression is not working properly here for the year 2025 so we will use another method to predict the rate for 2025
 # Predicting the rate for 2025
