@@ -48,20 +48,20 @@ plt.show()
 # from sklearn.linear_model import LinearRegression
 # import pandas as pd
 
-# # Sample data
-# # data = {'hours_studied': [1, 2, 3, 4, 5],
-# #         'marks_obtained': [20, 40, 60, 80, 100]}
-# landRate={'year':[2010,2013,2017,2020],
-#           'rate':[5,7,9,11]}
+# Sample data
+# data = {'hours_studied': [1, 2, 3, 4, 5],
+#         'marks_obtained': [20, 40, 60, 80, 100]}
+landRate={'year':[2010,2013,2017,2020],
+          'rate':[5,7,9,11]}
 
-# df = pd.DataFrame(landRate)
+df = pd.DataFrame(landRate)
 
-# X = df[['year']]  # Features
-# y = df['rate']   # Target
+X = df[['year']]  # Features
+y = df['rate']   # Target
 
-# model = LinearRegression()
-# model.fit(X, y)
+model = LinearRegression()
+model.fit(X, y)
 
-# # Predict marks for 6 hours of study
-# print(model.predict([[2025]])) # i think linear regression is not working properly here for the year 2025 so we will use another method to predict the rate for 2025
-# Predicting the rate for 2025
+# Predict marks for 6 hours of study
+print(model.predict([[2025]])) # i think linear regression is not working properly here for the year 2025 so we will use another method to predict the rate for 2025
+

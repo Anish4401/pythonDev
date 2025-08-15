@@ -49,10 +49,12 @@ print(read_the_csv)
 read_the_csv.info()
   # it will give the info of the csv file
   # lets plot pie chart with the csv file
-data=read_the_csv['Code']  # it will take the value of the Value column
-labels=read_the_csv[['Code','Symbol',"Name"]]
-colors=['red','blue','green','yellow']
-explode=[0.1,0,0,0,0,0,0,0,0,0]
-plots.pie(data,labels=labels,colors=colors,autopct='%1.1f%%',shadow=True,explode=explode)
-print(plots.show())
+import matplotlib.pyplot as plots
+
+data = read_the_csv['Code']  # Using 'Code' column for histogram
+plots.hist(data, bins=10, color='skyblue', edgecolor='black')
+plots.title("Histogram of Currency Codes")
+plots.xlabel("Currency Code")
+plots.ylabel("Frequency")
+plots.show()
 
