@@ -45,7 +45,7 @@ plt.title("Currency Val")
 plt.xlabel("Code") 
 plt.ylabel("Symbol")
 plt.show()
-# from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 # import pandas as pd
 
 # Sample data

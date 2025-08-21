@@ -5,6 +5,6 @@ print(df.head(10))
 print(df.isnull().sum())
 #here we are just expleorng the the missign values in diff condtion while filling the datasets  here we found the multiple missing  values where we will 
 #try to impute them and with the impuetation Missing  technique
-# 1- Mean value Imputation
+# 1- Mean value Imputation  : Works well in the case of normallly distributed data 
 plot=sns.barplot(df['age'])
 print(plot)
